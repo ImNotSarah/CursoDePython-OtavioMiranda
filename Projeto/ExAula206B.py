@@ -1,8 +1,14 @@
 import json
+from ExAula206A import CAMINHO_ARQUIVO, Pessoa, fazer_dump
 
-with open('ExAula206.json', 'r', encoding='utf8') as arquivo:
-        dados = json.load(arquivo)
+#fazer_dump()
 
-print(dados)
-nome = dados['nome']
-sobrenome = dados['sobrenome']
+with open(CAMINHO_ARQUIVO, 'r') as arquivo:
+    pessoas = json.load(arquivo)
+    p1 = Pessoa(**pessoas[0])
+    p2 = Pessoa(**pessoas[1])
+    p3 = Pessoa(**pessoas[2])
+
+    print(p1.nome, p1.idade)
+    print(p2.nome, p2.idade)
+    print(p3.nome, p3.idade)
