@@ -1,5 +1,4 @@
 # Agregação
-
 # O carrinho agrega um ou mais produtos
 class Carrinho:
     def __init__(self):
